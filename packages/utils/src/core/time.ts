@@ -36,9 +36,10 @@ export function duration(
 }
 
 /**
- * 函数防抖
+ * Debounce function
  *
- * 延迟响应函数调用，在指定时间之内重复调用，则继续延迟
+ * Delays function execution until after specified time has elapsed since the last call.
+ * If the function is called again within the wait period, the timer resets.
  *
  * ```typescript
  * function fn(i: number): void {
@@ -71,9 +72,10 @@ export function debounce<T extends unknown[]>(
 }
 
 /**
- * 函数节流
+ * Throttle function
  *
- * 在指定时间内多次调用函数只响应第一次，即两次调用之间至少间隔 wait 毫秒
+ * Limits function execution to at most once per specified time interval.
+ * Multiple calls within the interval will be ignored except for the first one.
  *
  * ```typescript
  * function fn(i: number): void {

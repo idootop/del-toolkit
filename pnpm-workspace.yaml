@@ -7,14 +7,19 @@ catalog:
 
 catalogs:
   types:
-    '@types/node': ^22
-    '@types/react': ^19
+    "@types/node": ^22
+    "@types/react": ^19
+    "@types/react-dom": ^19
   dev:
-    '@biomejs/biome': 2.0.0
-    '@changesets/cli': ^2.29.5
+    "@biomejs/biome": 2.0.0
+    "@changesets/cli": ^2.29.5
     lefthook: ^1.11.14
     tsx: ^4.19.4
     tsup: ^8.5.0
     turbo: ^2.5.4
     typescript: ^5.8.3
+  test:
+    "@testing-library/dom": ^10.4.0
+    "@testing-library/react": ^16.3.0
+    jsdom: ^26.0.0
     vitest: ^3.2.4

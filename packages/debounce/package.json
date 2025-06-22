@@ -1,0 +1,61 @@
+{
+  "name": "@del-wang/debounce",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "🚰 Debounce and throttle functions for JavaScript/TypeScript",
+  "license": "MIT",
+  "author": {
+    "name": "Del Wang",
+    "email": "hello@xbox.work",
+    "url": "https://github.com/idootop"
+  },
+  "keywords": [
+    "debounce",
+    "throttle"
+  ],
+  "scripts": {
+    "build": "del build",
+    "test": "vitest run"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "types": "./dist/index.d.cts",
+  "main": "./dist/index.cjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": {
+      "import": {
+        "types": "./dist/*.d.ts",
+        "default": "./dist/*.js"
+      },
+      "require": {
+        "types": "./dist/*.d.cts",
+        "default": "./dist/*.cjs"
+      }
+    }
+  },
+  "devDependencies": {
+    "@del-wang/config": "workspace:*",
+    "tsup": "catalog:dev",
+    "typescript": "catalog:dev",
+    "vitest": "catalog:test"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "sideEffects": false,
+  "packageManager": "pnpm@10.12.1",
+  "homepage": "https://github.com/idootop/del-toolkit",
+  "bugs": "https://github.com/idootop/del-toolkit/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idootop/del-toolkit.git"
+  }
+}
