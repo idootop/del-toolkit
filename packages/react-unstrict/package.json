@@ -2,7 +2,7 @@
   "name": "@del-wang/react-unstrict",
   "version": "1.0.0",
   "type": "module",
-  "description": "✂️ Bypass React StrictMode double execution for consistent dev/prod behavior",
+  "description": "✂️ Bypass React StrictMode double execution for consistent development behavior",
   "license": "MIT",
   "author": {
     "name": "Del Wang",
