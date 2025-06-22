@@ -21,6 +21,9 @@
   "scripts": {
     "build": "del build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "README.md",

@@ -18,6 +18,9 @@
   "scripts": {
     "build": "bash bin/del.sh build"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "README.md",
