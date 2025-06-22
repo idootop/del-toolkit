@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
+    "test": "turbo run test",
     "postinstall": "[ -n \"$CI\" ] || lefthook install",
     "publish-packages": "changeset version && turbo run build && changeset publish && git push --follow-tags"
   },
