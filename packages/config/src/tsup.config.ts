@@ -1,0 +1,16 @@
+export const config: any = {
+  entry: ['./src/**/*.ts'],
+  splitting: true,
+  outDir: 'dist',
+  target: 'es2022',
+  platform: 'neutral',
+  format: ['esm', 'cjs'],
+  sourcemap: false,
+  bundle: false,
+  treeshake: true,
+  minify: true,
+  keepNames: true,
+  clean: true,
+  shims: true,
+  dts: true,
+};

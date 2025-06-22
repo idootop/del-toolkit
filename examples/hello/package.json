@@ -1,0 +1,17 @@
+{
+  "name": "hello",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx index.ts"
+  },
+  "dependencies": {
+    "@del-wang/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@del-wang/config": "workspace:*",
+    "typescript": "catalog:dev",
+    "tsx": "catalog:dev"
+  }
+}

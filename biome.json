@@ -1,0 +1,3 @@
+{
+  "extends": ["@del-wang/config/biome"]
+}

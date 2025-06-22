@@ -1,0 +1,22 @@
+{
+  "name": "del-wang",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "postinstall": "[ -n \"$CI\" ] || lefthook install",
+    "publish-packages": "changeset version && turbo run build && changeset publish && git push --follow-tags"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:dev",
+    "@changesets/cli": "catalog:dev",
+    "@del-wang/config": "workspace:*",
+    "lefthook": "catalog:dev",
+    "turbo": "catalog:dev",
+    "typescript": "catalog:dev"
+  },
+  "packageManager": "pnpm@10.12.1",
+  "engines": {
+    "node": ">=22"
+  }
+}

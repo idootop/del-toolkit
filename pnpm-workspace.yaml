@@ -1,0 +1,19 @@
+packages:
+  - examples/*
+  - packages/*
+
+catalog:
+  react: ^19.0.0
+
+catalogs:
+  types:
+    '@types/node': ^22
+    '@types/react': ^19
+  dev:
+    '@biomejs/biome': 2.0.0
+    '@changesets/cli': ^2.29.5
+    lefthook: ^1.11.14
+    tsx: ^4.19.4
+    tsup: ^8.5.0
+    turbo: ^2.5.4
+    typescript: ^5.8.3
