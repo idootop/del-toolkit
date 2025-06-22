@@ -1,8 +1,8 @@
 {
-  "name": "@del-wang/equals",
+  "name": "@del-wang/react-unstrict",
   "version": "1.0.0",
   "type": "module",
-  "description": "🟰 Deep and shallow equal comparison for JavaScript",
+  "description": "✂️ Bypass React StrictMode double execution for consistent dev/prod behavior",
   "license": "MIT",
   "author": {
     "name": "Del Wang",
@@ -10,11 +10,12 @@
     "url": "https://github.com/idootop"
   },
   "keywords": [
-    "equals",
-    "compare",
     "react",
-    "shallowEqual",
-    "deepEqual"
+    "strict-mode",
+    "development",
+    "useEffect",
+    "hooks",
+    "bypass"
   ],
   "scripts": {
     "build": "del build",
@@ -45,15 +46,18 @@
     }
   },
   "peerDependencies": {
-    "@types/node": "catalog:types"
+    "@types/react": ">=16.8.0",
+    "react": ">=16.8.0"
   },
-  "peerDependenciesMeta": {
-    "@types/node": {
-      "optional": true
-    }
+  "dependencies": {
+    "@del-wang/equals": "workspace:*"
   },
   "devDependencies": {
     "@del-wang/config": "workspace:*",
+    "@testing-library/dom": "catalog:test",
+    "@testing-library/react": "catalog:test",
+    "@types/react": "catalog:types",
+    "jsdom": "catalog:test",
     "tsup": "catalog:dev",
     "typescript": "catalog:dev",
     "vitest": "catalog:test"
