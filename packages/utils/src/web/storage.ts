@@ -1,43 +1,35 @@
-import { jsonDecode, jsonEncode, LRUCache } from '../core/index.js';
+import { jsonDecode, jsonEncode } from '../core/object.js';
 
 class _LocalStorage {
-  private _cache = new LRUCache<string, any>();
+  has(key: string): boolean {
+    if (typeof localStorage === 'undefined') {
+      return false;
+    }
+    return localStorage.getItem(key) != null;
+  }
 
-  get<T = any>(key: string): T | null {
+  getItem<T = any>(key: string): T | null {
     if (typeof localStorage === 'undefined') {
       return null;
     }
-    if (this._cache.has(key)) {
-      return this._cache.get(key);
-    }
     const str = localStorage.getItem(key);
     const data = jsonDecode(str) ?? str;
-    this._cache.set(key, data);
     return data;
   }
 
-  set = (key: string, data: any) => {
+  setItem = (key: string, data: any) => {
     if (typeof localStorage === 'undefined') {
       return;
     }
     const saveData = jsonEncode(data)!;
     localStorage.setItem(key, saveData);
-    this._cache.set(key, data);
   };
 
-  has(key: string): boolean {
-    if (typeof localStorage === 'undefined') {
-      return false;
-    }
-    return this._cache.has(key) || localStorage.getItem(key) != null;
-  }
-
-  delete(key: string) {
+  removeItem(key: string) {
     if (typeof localStorage === 'undefined') {
       return;
     }
     localStorage.removeItem(key);
-    this._cache.delete(key);
   }
 
   clear() {
@@ -45,7 +37,6 @@ class _LocalStorage {
       return;
     }
     localStorage.clear();
-    this._cache.clear();
   }
 }
 
