@@ -32,7 +32,7 @@ npm install -D @del-wang/config
 
 ```yml
 extends:
-  - "@del-wang/config/lefthook"
+  - "node_modules/@del-wang/config/dist/lefthook.yml"
 ```
 
 ### tsup.config.ts
