@@ -2,7 +2,7 @@
 
 🛠️ A collection of modern, lightweight development tools and utilities for JavaScript/TypeScript projects.
 
-<img src='./assets/banner.webp' alt='del-toolkit' width="512"/>
+![del-toolkit](./assets/banner.jpg)
 
 ## 📦 Packages
 
