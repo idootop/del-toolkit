@@ -1,2 +1,2 @@
 extends:
-  - "@del-wang/config/lefthook"
+  - "node_modules/@del-wang/config/dist/lefthook.yml"
