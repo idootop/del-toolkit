@@ -6,9 +6,17 @@ export async function sleep(duration: number, unit: TimeUnit = 'millisecond') {
   );
 }
 
-export function timestamp(unit: TimeUnit = 'millisecond') {
+export function now(unit: TimeUnit = 'millisecond') {
   const now = Date.now();
   return unit === 'millisecond' ? now : Math.floor(now / 1000);
+}
+
+export function timestamp(
+  date: Date = new Date(),
+  unit: TimeUnit = 'millisecond',
+) {
+  const time = date.getTime();
+  return unit === 'millisecond' ? time : Math.floor(time / 1000);
 }
 
 export function duration(
