@@ -1,5 +1,5 @@
 ---
-"@del-wang/utils": major
+"@del-wang/utils": minor
 ---
 
 feat: add createProxyStorage
