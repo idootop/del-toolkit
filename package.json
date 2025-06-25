@@ -6,6 +6,7 @@
     "build": "turbo run build",
     "test": "turbo run test",
     "postinstall": "[ -n \"$CI\" ] || lefthook install",
+    "lint": "biome check --write --no-errors-on-unmatched --diagnostic-level=error .",
     "publish-packages": "changeset version && turbo run build && changeset publish && git push --follow-tags"
   },
   "devDependencies": {
