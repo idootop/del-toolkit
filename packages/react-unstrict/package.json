@@ -51,7 +51,6 @@
     }
   },
   "peerDependencies": {
-    "@types/react": ">=16.8.0",
     "react": ">=16.8.0"
   },
   "dependencies": {
@@ -68,7 +67,7 @@
     "vitest": "catalog:test"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "sideEffects": false,
   "packageManager": "pnpm@10.12.1",

@@ -49,14 +49,6 @@
       }
     }
   },
-  "peerDependencies": {
-    "@types/node": "catalog:types"
-  },
-  "peerDependenciesMeta": {
-    "@types/node": {
-      "optional": true
-    }
-  },
   "devDependencies": {
     "@del-wang/config": "workspace:*",
     "tsup": "catalog:dev",
@@ -64,7 +56,7 @@
     "vitest": "catalog:test"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18"
   },
   "sideEffects": false,
   "packageManager": "pnpm@10.12.1",

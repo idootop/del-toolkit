@@ -1,3 +1,9 @@
+let id = 0;
+
+export function nextId() {
+  return id++;
+}
+
 export function randomInt(_min: number, _max?: number) {
   let min = _min;
   let max = _max;

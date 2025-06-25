@@ -42,7 +42,7 @@ catalogs:
       version: 3.2.4
   types:
     '@types/node':
-      specifier: ^22
+      specifier: ^18.0.0 || ^20.0.0 || >=22.0.0
       version: 22.15.32
     '@types/react':
       specifier: ^19
@@ -109,10 +109,6 @@ importers:
         version: 3.2.4(@types/node@22.15.32)(jsdom@26.1.0)(tsx@4.20.3)
 
   packages/equals:
-    dependencies:
-      '@types/node':
-        specifier: catalog:types
-        version: 22.15.32
     devDependencies:
       '@del-wang/config':
         specifier: workspace:*
