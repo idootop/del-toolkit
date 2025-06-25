@@ -1,6 +1,6 @@
 {
   "name": "@del-wang/utils",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "description": "🛠️ Essential utility functions for modern JavaScript development",
   "license": "MIT",
