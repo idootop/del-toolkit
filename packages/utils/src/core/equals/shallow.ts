@@ -32,6 +32,6 @@ export function shallowEqual(objA: any, objB: any) {
 function is(x: any, y: any) {
   return typeof Object.is === 'function'
     ? Object.is(x, y)
-    : // biome-ignore lint/suspicious/noSelfCompare: <explanation>
+    : // biome-ignore lint/suspicious/noSelfCompare: just do it
       (x === y && (x !== 0 || 1 / x === 1 / y)) || (x !== x && y !== y);
 }

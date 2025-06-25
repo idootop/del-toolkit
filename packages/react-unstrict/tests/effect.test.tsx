@@ -1,5 +1,5 @@
 import { configure, render, waitFor } from '@testing-library/react';
-// biome-ignore lint/correctness/noUnusedImports: <explanation>
+// biome-ignore lint/correctness/noUnusedImports: just do it
 import React, { StrictMode, useEffect } from 'react';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 

@@ -36,8 +36,8 @@ function _deepEqual(obj: any, newObj: any, _stack: any[] = []): boolean {
       !(Number.isNaN(objKey) && Number.isNaN(newObjKey)) &&
       !(
         areCompatibleObjects &&
-        // biome-ignore lint/suspicious/noGlobalIsNan: <explanation>
-        // biome-ignore lint/style/useTemplate: <explanation>
+        // biome-ignore lint/suspicious/noGlobalIsNan: just do it
+        // biome-ignore lint/style/useTemplate: just do it
         (isNaN(objKey)
           ? objKey + '' === newObjKey + ''
           : +objKey === +newObjKey)

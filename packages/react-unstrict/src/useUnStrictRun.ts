@@ -1,4 +1,4 @@
-/** biome-ignore-all lint/correctness/useHookAtTopLevel: <explanation> */
+/** biome-ignore-all lint/correctness/useHookAtTopLevel: just do it */
 import { useEffect, useRef } from 'react';
 
 import { kIsReactDev } from './dev.js';

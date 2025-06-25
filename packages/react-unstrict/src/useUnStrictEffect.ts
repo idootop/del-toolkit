@@ -1,5 +1,5 @@
-/** biome-ignore-all lint/correctness/useHookAtTopLevel: <explanation> */
-/** biome-ignore-all lint/correctness/useExhaustiveDependencies: <explanation> */
+/** biome-ignore-all lint/correctness/useHookAtTopLevel: just do it */
+/** biome-ignore-all lint/correctness/useExhaustiveDependencies: just do it */
 import { shallowEqual } from '@del-wang/equals';
 import { type DependencyList, useEffect, useRef } from 'react';
 

@@ -1,5 +1,5 @@
 import { configure, render } from '@testing-library/react';
-// biome-ignore lint/correctness/noUnusedImports: <explanation>
+// biome-ignore lint/correctness/noUnusedImports: just do it
 import React, { StrictMode } from 'react';
 import { beforeEach, describe, expect, test, vi } from 'vitest';
 
