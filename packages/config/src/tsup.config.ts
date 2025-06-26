@@ -1,5 +1,10 @@
 export const config: any = {
-  entry: ['./src/**/*.ts', './src/**/*.tsx'],
+  entry: [
+    './src/**/*.ts',
+    './src/**/*.tsx',
+    '!./src/**/*.test.ts',
+    '!./src/**/*.test.tsx',
+  ],
   splitting: true,
   outDir: 'dist',
   target: 'es2022',
