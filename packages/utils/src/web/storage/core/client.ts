@@ -25,6 +25,10 @@ export class ClientStorage<O = any> implements StringStorage<O> {
     if (!this.storage || typeof document === 'undefined') {
       return;
     }
+    if (data == null) {
+      this.storage.removeItem(key);
+      return;
+    }
     const encodedData = typeof data === 'string' ? data : jsonEncode(data);
     if (!encodedData) {
       throw new Error(`Failed to encode data for storage key: ${key}`);

@@ -35,7 +35,7 @@ export type ProxyStorage<T extends Record<string, any>> =
  * };
  *
  * // Delete by setting undefined
- * myStorage.session = undefined;
+ * myStorage.session = undefined; // or null;
  *
  * // Clear all
  * myStorage.clear();
@@ -62,7 +62,7 @@ export const createProxyStorage = <T extends Record<string, any>>({
     Object.defineProperty(proxy, key, {
       get: () => storage.getItem(key),
       set: (value) => {
-        if (value === undefined) {
+        if (value == null) {
           storage.removeItem(key);
           return;
         }
