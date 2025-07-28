@@ -1,5 +1,15 @@
 # @del-wang/config
 
+## 1.3.0
+
+### Minor Changes
+
+- 5f0892a: feat: add more logger and time utils
+
+### Patch Changes
+
+- cea9035: chore: add tsx file entry for tsup
+
 ## 1.2.0
 
 ### Minor Changes
