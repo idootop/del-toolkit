@@ -1,5 +1,10 @@
 export type TimeUnit = 'millisecond' | 'second';
 
+export const kOneSecond = 1000;
+export const kOneMinute = 60 * kOneSecond;
+export const kOneHour = 60 * kOneMinute;
+export const kOneDay = 24 * kOneHour;
+
 export async function sleep(duration: number, unit: TimeUnit = 'millisecond') {
   return new Promise((resolve) =>
     setTimeout(resolve, unit === 'millisecond' ? duration : duration * 1000),
@@ -31,16 +36,65 @@ export function duration(
 ) {
   const durationMap: Record<string, number> = {
     millisecond: 1,
-    second: 1000,
-    minute: 60 * 1000,
-    hour: 60 * 60 * 1000,
-    day: 24 * 60 * 60 * 1000,
+    second: kOneSecond,
+    minute: kOneMinute,
+    hour: kOneHour,
+    day: kOneDay,
   };
   const time = Object.entries(values).reduce(
     (acc, [key, value]) => acc + durationMap[key]! * value,
     0,
   );
   return unit === 'millisecond' ? time : Math.floor(time / 1000);
+}
+
+/**
+ * 2024-09-03 10:15:32
+ */
+export function formatTime(timestamp: number, offset = 0) {
+  return new Date(timestamp + offset * 3600000)
+    .toISOString()
+    .replace('T', ' ')
+    .substring(0, 19);
+}
+
+/**
+ * 2024-01-01
+ */
+export function formatDate(timestamp: number, offset = 0) {
+  return new Date(timestamp + offset * 3600000).toISOString().substring(0, 10);
+}
+
+/**
+ * '2024-09-03 10:15:32' 👉 1725358532000
+ */
+export function toTimestamp(time: string, offset = 0) {
+  const sign = offset >= 0 ? '+' : '-';
+  const offsetStr = Math.abs(offset).toString().padStart(2, '0');
+  return new Date(`${time}${sign}${offsetStr}`).getTime();
+}
+
+/**
+ * Measure time usage
+ *
+ * ```typescript
+ * const t = timeUsage()
+ * // await someAsyncTasks()
+ * const duration = t.duration()
+ * ```
+ */
+export function timeUsage() {
+  const start = performance.now();
+  return {
+    duration(enableLog = true) {
+      const end = performance.now();
+      const duration = end - start;
+      if (enableLog) {
+        console.log(`Time usage: ${duration} ms`);
+      }
+      return duration;
+    },
+  };
 }
 
 /**

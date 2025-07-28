@@ -37,3 +37,12 @@ export function toSet<T>(items: T[], byKey?: (e: T) => string | number) {
   }
   return Array.from(new Set(items));
 }
+
+export function inserts<T>(oldItems: T[], index: number, newItems: T | T[]) {
+  if (Array.isArray(newItems)) {
+    oldItems.splice(index + 1, 0, ...newItems);
+  } else {
+    oldItems.splice(index + 1, 0, newItems);
+  }
+  return oldItems;
+}

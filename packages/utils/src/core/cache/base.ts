@@ -35,6 +35,10 @@ export class BaseCache {
     this._cache.set(key, { data, expireAt });
   }
 
+  keys() {
+    return Array.from(this._cache.keys());
+  }
+
   has(key: string): boolean {
     return this._cache.has(key);
   }

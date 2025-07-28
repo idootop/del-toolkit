@@ -1,3 +1,7 @@
+export const kSymbolNone = Symbol('none');
+
+export const identity = <T>(e: T) => e;
+
 export function isNull<T>(input: T | null): input is null {
   return input === null;
 }

@@ -1,12 +1,7 @@
-import { isEmpty } from './is.js';
 import type { Prettify } from './typing.js';
 
 export function readonly<T>(obj: T): Readonly<T> {
   return Object.freeze(obj);
-}
-
-export function withDefault<T>(e: any, defaultValue: T): T {
-  return isEmpty(e) ? defaultValue : e;
 }
 
 export function jsonEncode<T>(
@@ -36,20 +31,28 @@ export function jsonDecode<T = any>(json: string | null | undefined) {
   }
 }
 
-export function removeNullish<T>(data: T): T {
+export function removeBy<T>(data: T, by: (e: any) => boolean): T {
   if (!data) {
     return data;
   }
   if (Array.isArray(data)) {
-    return data.filter((e) => e != null) as any;
+    return data.filter((e) => !by(e)) as any;
   }
   const res = {} as any;
   for (const key in data) {
-    if (data[key] != null) {
+    if (!by(data[key])) {
       res[key] = data[key];
     }
   }
   return res;
+}
+
+export function removeNullish<T>(data: T): T {
+  return removeBy(data, (e) => e == null);
+}
+
+export function removeEmpty<T>(data: T): T {
+  return removeBy(data, (e) => e == null || e === '');
 }
 
 export function pick<T extends Record<string, any>, K extends keyof T>(

@@ -35,6 +35,10 @@ export class LRUCache<K = string, V = any> {
     }
   }
 
+  keys() {
+    return Array.from(this._cache.keys());
+  }
+
   has(key: K): boolean {
     return this._cache.has(key);
   }
