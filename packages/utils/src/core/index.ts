@@ -10,3 +10,4 @@ export * from './sort.js';
 export * from './string.js';
 export * from './time.js';
 export * from './typing.js';
+export * from './with.js';
