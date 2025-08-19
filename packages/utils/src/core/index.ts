@@ -8,6 +8,7 @@ export * from './run.js';
 export * from './slice.js';
 export * from './sort.js';
 export * from './string.js';
+export * from './symbol.js';
 export * from './time.js';
 export * from './typing.js';
 export * from './with.js';
