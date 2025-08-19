@@ -30,6 +30,7 @@
     "./biome": "./dist/biome.json",
     "./lefthook": "./dist/lefthook.yml",
     "./typescript": "./dist/typescript.json",
+    "./typescript-next": "./dist/typescript-next.json",
     "./typescript-bundler": "./dist/typescript-bundler.json",
     "./tsup": {
       "import": {
