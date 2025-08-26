@@ -1,5 +1,11 @@
 # @del-wang/utils
 
+## 1.4.0
+
+### Minor Changes
+
+- feat: add nextjs config and none symbol
+
 ## 1.3.0
 
 ### Minor Changes
