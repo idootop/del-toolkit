@@ -75,7 +75,8 @@
         }
       },
       "style": {
-        "noNonNullAssertion": "off"
+        "noNonNullAssertion": "off",
+        "useTemplate": "off"
       },
       "correctness": {
         "noUnusedImports": "error",
