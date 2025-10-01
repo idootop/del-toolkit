@@ -62,7 +62,7 @@
     "@testing-library/react": "catalog:test",
     "@types/react": "catalog:types",
     "jsdom": "catalog:test",
-    "tsup": "catalog:dev",
+    "tsdown": "catalog:dev",
     "typescript": "catalog:dev",
     "vitest": "catalog:test"
   },

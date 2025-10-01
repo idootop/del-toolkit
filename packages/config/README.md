@@ -35,11 +35,11 @@ extends:
   - "node_modules/@del-wang/config/dist/lefthook.yml"
 ```
 
-### tsup.config.ts
+### tsdown.config.ts
 
 ```ts
-import { config } from "@del-wang/config/tsup";
-import { defineConfig } from "tsup";
+import { config } from "@del-wang/config/tsdown";
+import { defineConfig } from "tsdown";
 
 export default defineConfig(config);
 ```

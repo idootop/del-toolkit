@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@del-wang/config": "workspace:*",
-    "tsup": "catalog:dev",
+    "tsdown": "catalog:dev",
     "typescript": "catalog:dev",
     "vitest": "catalog:test"
   },
