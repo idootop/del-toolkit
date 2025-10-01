@@ -1,5 +1,11 @@
 # @del-wang/config
 
+## 1.5.0
+
+### Minor Changes
+
+- refactor: migrate to tsdown
+
 ## 1.4.0
 
 ### Minor Changes

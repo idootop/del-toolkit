@@ -1,6 +1,6 @@
 {
   "name": "@del-wang/config",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "type": "module",
   "description": "⚙️ Shareable configurations for linting, formatting and build tools.",
   "license": "MIT",
