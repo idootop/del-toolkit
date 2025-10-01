@@ -3,7 +3,7 @@
 set -e
 
 build() {
-    pnpm tsup
+    pnpm tsdown
 
     if [ -d "bin" ]; then
         cp -r bin/* dist/

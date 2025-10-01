@@ -13,7 +13,7 @@
     "biome.json",
     "lefthook.yml",
     "tsconfig.json",
-    "tsup.config.ts"
+    "tsdown.config.ts"
   ],
   "scripts": {
     "build": "bash bin/del.sh build"
@@ -32,14 +32,14 @@
     "./typescript": "./dist/typescript.json",
     "./typescript-next": "./dist/typescript-next.json",
     "./typescript-bundler": "./dist/typescript-bundler.json",
-    "./tsup": {
+    "./tsdown": {
       "import": {
-        "types": "./dist/tsup.config.d.ts",
-        "default": "./dist/tsup.config.js"
+        "types": "./dist/tsdown.config.d.ts",
+        "default": "./dist/tsdown.config.js"
       },
       "require": {
-        "types": "./dist/tsup.config.d.cts",
-        "default": "./dist/tsup.config.cjs"
+        "types": "./dist/tsdown.config.d.cts",
+        "default": "./dist/tsdown.config.cjs"
       }
     },
     "./*": {
@@ -54,7 +54,7 @@
     }
   },
   "devDependencies": {
-    "tsup": "catalog:dev"
+    "tsdown": "catalog:dev"
   },
   "engines": {
     "node": ">=18"
