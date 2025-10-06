@@ -87,6 +87,9 @@
         "noConfusingVoidType": "off",
         "noDoubleEquals": "off",
         "noExplicitAny": "off"
+      },
+      "performance": {
+        "noAccumulatingSpread": "off"
       }
     }
   }
