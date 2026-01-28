@@ -16,7 +16,8 @@
     "tsdown.config.ts"
   ],
   "scripts": {
-    "build": "bash bin/del.sh build"
+    "prepack": "clean-pkg-json",
+    "build": "del build"
   },
   "files": [
     "dist",
@@ -32,6 +33,8 @@
     "./typescript": "./dist/typescript.json",
     "./typescript-next": "./dist/typescript-next.json",
     "./typescript-bundler": "./dist/typescript-bundler.json",
+    "./tsconfig-vite-app": "./dist/tsconfig.vite.app.json",
+    "./tsconfig-vite-node": "./dist/tsconfig.vite.node.json",
     "./tsdown": {
       "import": {
         "types": "./dist/tsdown.config.d.ts",
@@ -54,13 +57,14 @@
     }
   },
   "devDependencies": {
+    "clean-pkg-json": "catalog:dev",
     "tsdown": "catalog:dev"
   },
   "engines": {
     "node": ">=18"
   },
   "sideEffects": false,
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.28.2",
   "homepage": "https://github.com/idootop/del-toolkit",
   "bugs": "https://github.com/idootop/del-toolkit/issues",
   "repository": {

@@ -26,6 +26,9 @@
     }
   },
   "css": {
+    "parser": {
+      "cssModules": true
+    },
     "formatter": {
       "enabled": true
     }
@@ -39,12 +42,12 @@
       "**/*.mjs",
       "**/*.json",
       "**/*.css",
-      "!**/node_modules/**",
-      "!**/temp/**",
-      "!**/dist/**",
-      "!**/build/**",
-      "!**/.next/**",
-      "!**/.turbo/**"
+      "!**/node_modules",
+      "!**/temp",
+      "!**/dist",
+      "!**/build",
+      "!**/.next",
+      "!**/.turbo"
     ]
   },
   "formatter": {
