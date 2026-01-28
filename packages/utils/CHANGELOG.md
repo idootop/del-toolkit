@@ -1,5 +1,11 @@
 # @del-wang/utils
 
+## 1.6.0
+
+### Minor Changes
+
+- chore: bump deps
+
 ## 1.5.0
 
 ### Minor Changes

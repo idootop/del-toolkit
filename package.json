@@ -7,7 +7,8 @@
     "test": "turbo run test",
     "postinstall": "[ -n \"$CI\" ] || lefthook install",
     "lint": "biome check --write --no-errors-on-unmatched --diagnostic-level=error .",
-    "publish-packages": "changeset version && turbo run build && changeset publish && git push --follow-tags"
+    "new-changeset": "changeset && changeset version && git push --follow-tags",
+    "publish-packages": "turbo run build && changeset publish"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:dev",
