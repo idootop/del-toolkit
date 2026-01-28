@@ -1,6 +1,6 @@
 {
   "name": "@del-wang/config",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "type": "module",
   "description": "⚙️ Shareable configurations for linting, formatting and build tools.",
   "license": "MIT",
@@ -31,10 +31,9 @@
     "./biome": "./dist/biome.json",
     "./lefthook": "./dist/lefthook.yml",
     "./typescript": "./dist/typescript.json",
+    "./typescript-vite": "./dist/typescript-vite.json",
     "./typescript-next": "./dist/typescript-next.json",
     "./typescript-bundler": "./dist/typescript-bundler.json",
-    "./tsconfig-vite-app": "./dist/tsconfig.vite.app.json",
-    "./tsconfig-vite-node": "./dist/tsconfig.vite.node.json",
     "./tsdown": {
       "import": {
         "types": "./dist/tsdown.config.d.ts",

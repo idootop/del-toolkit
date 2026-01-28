@@ -22,12 +22,6 @@
     "noUnusedParameters": true,
     "noUncheckedIndexedAccess": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+    "noUncheckedSideEffectImports": true
+  }
 }

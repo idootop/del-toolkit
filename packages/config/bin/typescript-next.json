@@ -15,7 +15,5 @@
     "jsx": "preserve",
     "incremental": true,
     "plugins": [{ "name": "next" }]
-  },
-  "include": [".next/types/**/*.ts", "next-env.d.ts", "build/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  }
 }
